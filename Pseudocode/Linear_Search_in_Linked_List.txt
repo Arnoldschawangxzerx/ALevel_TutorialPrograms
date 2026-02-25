@@ -1,0 +1,12 @@
+FUNCTION FindNode(head, target):
+    current ← head
+    
+    WHILE current ≠ NULL DO
+        IF current.data = target THEN
+            RETURN current  // Item found
+        END IF
+        current ← current.next  // Move to next node
+    END WHILE
+    
+    RETURN NULL  // Item not found
+END FUNCTION
