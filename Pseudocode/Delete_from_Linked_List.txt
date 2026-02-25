@@ -1,0 +1,21 @@
+FUNCTION DeleteNode(head, target):
+    IF head = NULL THEN
+        RETURN NULL  // Empty list
+    END IF
+    
+    IF head.data = target THEN
+        RETURN head.next  // Delete first node
+    END IF
+    
+    current ← head
+    
+    WHILE current.next ≠ NULL DO
+        IF current.next.data = target THEN
+            current.next ← current.next.next  // Bypass node
+            RETURN head
+        END IF
+        current ← current.next
+    END WHILE
+    
+    RETURN head  // Item not found
+END FUNCTION
