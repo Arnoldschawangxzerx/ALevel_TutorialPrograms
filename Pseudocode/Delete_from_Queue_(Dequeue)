@@ -1,0 +1,14 @@
+FUNCTION Dequeue(queue):
+    IF queue.front = NULL THEN
+        RETURN NULL  // Queue underflow
+    END IF
+    
+    item ← queue.front  // Get front item
+    queue.front ← queue.front.next  // Move front pointer
+    
+    IF queue.front = NULL THEN
+        queue.rear ← NULL  // Queue now empty
+    END IF
+    
+    RETURN item
+END FUNCTION
