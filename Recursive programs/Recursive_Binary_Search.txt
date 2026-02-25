@@ -1,0 +1,22 @@
+FUNCTION RecursiveBinarySearch(arr, target, left, right):
+    IF left > right THEN
+        RETURN -1  // Base case: not found
+    END IF
+    
+    mid ← (left + right) DIV 2
+    
+    IF arr[mid] = target THEN
+        RETURN mid  // Base case: found
+    ELSE IF arr[mid] < target THEN
+        RETURN RecursiveBinarySearch(arr, target, mid + 1, right)  // Right half
+    ELSE
+        RETURN RecursiveBinarySearch(arr, target, left, mid - 1)  // Left half
+    END IF
+END FUNCTION
+
+Trace Example:
+Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target: 23
+
+Call 1: left=0, right=9, mid=4, arr[4]=16 < 23 → Search right half
+Call 2: left=5, right=9, mid=7, arr[7]=56 > 23 → Search left half
+Call 3: left=5, right=6, mid=5, arr[5]=23 = 23 → RETURN 5 ✓
