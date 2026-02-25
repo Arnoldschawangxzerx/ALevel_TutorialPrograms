@@ -1,0 +1,11 @@
+FUNCTION RecursiveLinearSearch(arr, target, index):
+    IF index >= LENGTH(arr) THEN
+        RETURN -1  // Base case: not found
+    END IF
+    
+    IF arr[index] = target THEN
+        RETURN index  // Base case: found
+    END IF
+    
+    RETURN RecursiveLinearSearch(arr, target, index + 1)  // Recursive call
+END FUNCTION
