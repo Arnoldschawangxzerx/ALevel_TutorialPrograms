@@ -1,0 +1,13 @@
+FUNCTION InsertNode(root, newNode):
+    IF root = NULL THEN
+        RETURN newNode  // Empty tree
+    END IF
+    
+    IF newNode.data < root.data THEN
+        root.left ← InsertNode(root.left, newNode)  // Insert in left subtree
+    ELSE
+        root.right ← InsertNode(root.right, newNode)  // Insert in right subtree
+    END IF
+    
+    RETURN root
+END FUNCTION
