@@ -1,0 +1,19 @@
+FUNCTION InsertNode(head, newNode, position):
+    IF position = 1 THEN
+        newNode.next ← head  // Insert at beginning
+        head ← newNode
+    ELSE
+        current ← head
+        count ← 1
+        
+        WHILE count < position - 1 AND current ≠ NULL DO
+            current ← current.next
+            count ← count + 1
+        END WHILE
+        
+        IF current ≠ NULL THEN
+            newNode.next ← current.next  // Link new node
+            current.next ← newNode  // Link previous node
+        END IF
+    END IF
+END FUNCTION
