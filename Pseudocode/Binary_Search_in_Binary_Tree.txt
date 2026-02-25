@@ -1,0 +1,11 @@
+FUNCTION FindNode(root, target):
+    IF root = NULL OR root.data = target THEN
+        RETURN root  // Found or reached end
+    END IF
+    
+    IF target < root.data THEN
+        RETURN FindNode(root.left, target)  // Search left subtree
+    ELSE
+        RETURN FindNode(root.right, target)  // Search right subtree
+    END IF
+END FUNCTION
