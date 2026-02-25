@@ -1,0 +1,26 @@
+FUNCTION Factorial(n):
+    IF n = 0 OR n = 1 THEN
+        RETURN 1  // Base case
+    END IF
+    
+    RETURN n * Factorial(n - 1)  // Recursive call
+END FUNCTION
+Trace Example:
+
+
+Copy code
+n = 5
+
+Call 1: Factorial(5) = 5 * Factorial(4)
+Call 2: Factorial(4) = 4 * Factorial(3)
+Call 3: Factorial(3) = 3 * Factorial(2)
+Call 4: Factorial(2) = 2 * Factorial(1)
+Call 5: Factorial(1) = 1  // Base case reached
+
+Unwinding:
+Call 4: 2 * 1 = 2
+Call 3: 3 * 2 = 6
+Call 2: 4 * 6 = 24
+Call 1: 5 * 24 = 120
+
+RETURN 120 ✓
