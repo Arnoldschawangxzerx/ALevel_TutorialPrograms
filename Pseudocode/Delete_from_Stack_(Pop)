@@ -1,0 +1,9 @@
+FUNCTION Pop(stack):
+    IF stack.top = NULL THEN
+        RETURN NULL  // Stack underflow
+    END IF
+    
+    item ← stack.top  // Get top item
+    stack.top ← stack.top.next  // Move top pointer down
+    RETURN item
+END FUNCTION
