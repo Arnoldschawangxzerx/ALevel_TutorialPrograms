@@ -1,0 +1,5 @@
+FUNCTION Push(stack, item):
+    stack.top ← item  // Add item to top
+    item.next ← stack.top  // Point to previous top
+    stack.top ← item  // Update top pointer
+END FUNCTION
