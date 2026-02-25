@@ -1,0 +1,9 @@
+FUNCTION Enqueue(queue, item):
+    IF queue.rear = NULL THEN
+        queue.front ← item  // First item
+        queue.rear ← item
+    ELSE
+        queue.rear.next ← item  // Add to rear
+        queue.rear ← item  // Update rear pointer
+    END IF
+END FUNCTION
