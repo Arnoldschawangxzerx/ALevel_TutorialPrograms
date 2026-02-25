@@ -9,3 +9,10 @@ FUNCTION RecursiveLinearSearch(arr, target, index):
     
     RETURN RecursiveLinearSearch(arr, target, index + 1)  // Recursive call
 END FUNCTION
+Trace Example:
+Array: [4, 7, 2, 9], Target: 9, Start Index: 0
+
+Call 1: index=0, arr[0]=4 ≠ 9 → RecursiveLinearSearch(arr, 9, 1)
+Call 2: index=1, arr[1]=7 ≠ 9 → RecursiveLinearSearch(arr, 9, 2)
+Call 3: index=2, arr[2]=2 ≠ 9 → RecursiveLinearSearch(arr, 9, 3)
+Call 4: index=3, arr[3]=9 = 9 → RETURN 3 ✓
